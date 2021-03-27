@@ -1,7 +1,6 @@
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
-import plotly.graph_objs as go
 import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 
@@ -58,7 +57,7 @@ controls = dbc.Card(
         dbc.FormGroup(
             [
                 dbc.Label('Control Learning Rate:'),
-                dcc.Slider(id='learning_rate', min=0.01, max=10, step=.25, value=.01),
+                dcc.Slider(id='learning_rate', min=0.01, max=5, step=.25, value=.01),
                 html.Span(id='learning_rate_label')
             ]
         ),
