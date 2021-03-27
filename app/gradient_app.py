@@ -56,9 +56,9 @@ controls = dbc.Card(
         html.Br(),
         dbc.FormGroup(
             [
-                dbc.Label('Control Learning Rate:'),
+                dbc.Label('Learning Rate:', id='learning_rate_label'),
                 dcc.Slider(id='learning_rate', min=0.01, max=5, step=.1, value=.01),
-                html.Span(id='learning_rate_label')
+                #tml.Span(id='learning_rate_label')
             ]
         ),
     ],
@@ -78,11 +78,11 @@ controls2 = dbc.Card(
                         dbc.Button("Step Forward", id='step_forward',
                                    outline=True, n_clicks=1, color='dark',
                                    size='lg'),
-                        dbc.Button('Reset', id='reset_steps',
-                                   outline=True, n_clicks=0, color='dark',
-                                   size='lg'),
                     ]
-                )
+                ),
+                dbc.Button('Reset', id='reset_steps',
+                           outline=True, n_clicks=0, color='dark',
+                           size='lg')
             ]
         )
     ],
@@ -114,7 +114,7 @@ app.layout = dbc.Container(
     ]
 )
 def update_label_steps(learning_rate):
-    return '--> Learning Rate: ' + str(learning_rate)
+    return 'Learning Rate: ' + str(learning_rate)
 
 # Reset Forward Step of Gradient
 @app.callback(
