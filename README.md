@@ -1,4 +1,4 @@
-# ivi_PerformanceRecord
+# Interactive Visualization of Gradient Descent
 
 This repository is for the study course "Interactive Visualizations" and the performance record we have to write for to finish this course.
 I've chosen to visualize the Vanilla Gradient Descent Algorithm as a visualization for the this small project.
