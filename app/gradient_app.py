@@ -20,6 +20,23 @@ controls = dbc.Card(
     [
         dbc.FormGroup(
             [
+                dbc.Label("Choose Function:"),
+                dcc.Dropdown(
+                    id='dropdown_function',
+                    options=[
+                        {'label': str(functions[1]), 'value': 1},
+                        {'label': str(functions[2]), 'value': 2},
+                        {'label': str(functions[3]), 'value': 3},
+                        {'label': str(functions[4]), 'value': 4},
+                        {'label': str(functions[5]), 'value': 5}
+                    ],
+                    value=2
+                )
+            ]
+        ),
+        html.Br(),
+        dbc.FormGroup(
+            [
                 dbc.Label("Starting Points:"),
                 html.Br(),
                 dcc.Input(
@@ -33,23 +50,6 @@ controls = dbc.Card(
                     value=0, min=-2, max=2,
                     type='number',
                     placeholder='Y',
-                )
-            ]
-        ),
-        html.Br(),
-        dbc.FormGroup(
-            [
-                dbc.Label("Choose Function:"),
-                dcc.Dropdown(
-                    id='dropdown_function',
-                    options=[
-                        {'label': str(functions[1]), 'value': 1},
-                        {'label': str(functions[2]), 'value': 2},
-                        {'label': str(functions[3]), 'value': 3},
-                        {'label': str(functions[4]), 'value': 4},
-                        {'label': str(functions[5]), 'value': 5}
-                    ],
-                    value=2
                 )
             ]
         ),
